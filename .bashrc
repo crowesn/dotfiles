@@ -5,12 +5,15 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # User specific aliases and functions
 
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias ll='ls -la'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias ctags="brew --prefex'/bin/ctags'"
 alias panboot="pandoc --template ~/.pandoc/pandoc-bootstrap/template.html --css ~/.pandoc/pandoc-bootstrap/template.css --self-contained --toc --toc-depth 2"
+
+
 # Source global definitions
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
