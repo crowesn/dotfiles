@@ -1,3 +1,7 @@
 [user]
 	name = crowesn
 	email = crowesn@gmail.com
+[core]
+	excludesfile = ~/.gitignore_global
+[push]
+	default = simple
