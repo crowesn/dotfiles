@@ -1,0 +1,12 @@
+# ~/.tmuxinator/ucrate.yml
+
+name: ucrate
+root: ~/development/ucrate
+
+windows:
+  - editor:
+      layout: main-horizontal
+      panes:
+        - vim
+        - #
+  - server: #

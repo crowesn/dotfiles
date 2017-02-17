@@ -6,11 +6,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-let NERDTreeQuitOnOpen=1
-
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
@@ -20,7 +17,7 @@ Plugin 'git://git.wincent.com/command-t.git'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'git@github.com:scrooloose/nerdtree.git'
+Plugin 'christoomey/vim-tmux-navigator'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -36,6 +33,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 set number
+set relativenumber
 colorscheme candy
 set tabstop=2
 set expandtab
@@ -45,7 +43,3 @@ syntax on
 filetype plugin indent on
 au BufRead,BufNewFile *.md set filetype=markdown
 map <C-n> :NERDTreeToggle<CR>
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l

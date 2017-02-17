@@ -1,0 +1,17 @@
+# ~/.tmuxinator/sufia-app.yml
+
+name: sufia-mediation
+root: ~/development/sufia-mediation
+windows:
+  - editor:
+      layout: main-horizontal
+      panes:
+        - vim
+        - #
+  - server: 
+      layout: tiled
+      panes:
+        - bundle exec rails server
+        - solr_wrapper -d solr/config/ --collection_name hydra-development
+        - fcrepo_wrapper -p 8984
+        - redis-server

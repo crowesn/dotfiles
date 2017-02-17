@@ -1,0 +1,16 @@
+# ~/.tmuxinator/hor.yml
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t scholar
+name: hor
+root: ~/development/house-of-refuge
+windows:
+  - editor:
+      layout: even-vertical 
+      panes:
+        - vim
+        - rails c
+  - server-stuff:
+      root: ~/development/house-of-refuge
+      panes:
+        - open /Applications/Postgres.app && rails s

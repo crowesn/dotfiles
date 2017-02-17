@@ -1,0 +1,9 @@
+# Misc swap files, etc
+
+.DS_Store
+*.swp
+.tmux_start*
+dump.rdb
+coverage/
+.byebug_history
+.internal_test_app/

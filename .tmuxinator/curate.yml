@@ -1,0 +1,20 @@
+# ~/.tmuxinator/curate.yml
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t curate
+name: curate
+root: ~/Development/curate
+windows:
+  - editor:
+      layout: even-vertical
+      panes:
+        - vim
+        - bundle exec rake jetty:start
+  - server-stuff:
+      root: ~/development/curate/spec/internal
+      layout: tiled
+      panes:
+        - redis-server
+        - rails c
+        - rails s
+        - RAILS_ENV=development QUEUE=* VERBOSE=1 bundle exec rake resque:work

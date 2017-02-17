@@ -1,0 +1,18 @@
+# ~/.tmuxinator/orcid.yml
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t curate
+name: orcid
+root: ~/Development/orcid
+windows:
+  - editor:
+      layout: even-vertical
+      panes:
+        - vim
+        - rake spec
+  - server-stuff:
+      root: ~/Development/orcid/.internal_test_app
+      layout: even-horizontal
+      panes:
+        - rails c
+        - rails s

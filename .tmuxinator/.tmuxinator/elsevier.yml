@@ -1,0 +1,11 @@
+# ~/.tmuxinator/elsevier.yml
+
+name: elsevier
+root: ~/development/science_direct_tools
+
+windows:
+  - editor:
+      layout: panes
+      panes:
+        - vim
+        - #

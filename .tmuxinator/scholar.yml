@@ -1,0 +1,21 @@
+# ~/.tmuxinator/scholar.yml
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t scholar
+name: scholar
+root: ~/development/scholar_uc
+pre: rvm use ruby-2.3.3
+windows:
+  - editor:
+      layout: even-vertical
+      panes:
+        - vim .
+        - rails c
+  - server-stuff:
+      root: ~/development/scholar_uc
+      layout: tiled
+      panes:
+        - redis-server
+        - fcrepo_wrapper -p 8984
+        - solr_wrapper -d solr/config/ --collection_name hydra-development
+        - rails s

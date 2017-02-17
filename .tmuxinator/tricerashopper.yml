@@ -1,0 +1,14 @@
+# ~/.tmuxinator/tricerashopper.yml
+
+name: tricerashopper
+root: ~/development/tricerashopper
+windows:
+  - editor:
+      layout: even-vertical 
+      panes:
+        - vim
+        - rails c
+  - server-stuff:
+      root: ~/development/tricerashopper
+      panes:
+        - open /Applications/Postgres.app && rails s

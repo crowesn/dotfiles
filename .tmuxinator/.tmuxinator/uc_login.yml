@@ -1,0 +1,17 @@
+# ~/.tmuxinator/uc_login.yml
+
+name: uc_login
+root: ~/development/uc_shibboleth_devise
+
+windows:
+  - editor:
+      layout: main-horizontal
+      panes:
+        - vim
+        - #
+  - server: 
+      root: ~/development/uc_shibboleth_devise/spec/test_app
+      layout: tiled
+      panes:
+        - bundle exec rails s
+        - bundle exec rails c

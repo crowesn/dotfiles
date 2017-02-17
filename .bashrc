@@ -10,6 +10,8 @@ alias ll='ls -la'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias tags='ctags -R -f ./.git/tags .'
+alias lynx='lynx -accept_all_cookies'
 function cd {
     builtin cd "$@" && ls -F
         }
@@ -44,3 +46,10 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Add fits
+export PATH="/usr/local/bin/fits-0.8.5:$PATH"
+# Search source
+function bgrep { 
+  ag "$@" $(bundle show --paths) . 
+} 
