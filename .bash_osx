@@ -1,0 +1,9 @@
+export PATH="/usr/local/sbin:$PATH"
+export PATH=":/usr/local/bin:$PATH" # Add homebrew to PATH
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+      . `brew --prefix`/etc/bash_completion
+    fi
+
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias ctags="`brew --prefix`/bin/ctags"

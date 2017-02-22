@@ -1,6 +1,8 @@
 #!/bin/sh
 
 cp ~/.bashrc .bashrc
+cp ~/.git-completion.bash .git-completion.bash
+cp ~/.bash_osx .bash_osx
 cp ~/.profile .profile
 cp ~/.bash_profile .bash_profile
 cp ~/.gitconfig .gitconfig

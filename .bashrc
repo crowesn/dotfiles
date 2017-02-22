@@ -1,11 +1,8 @@
 export EDITOR=vim
 
-# .bashrc
-
 # User specific aliases and functions
 set -o vi
 alias trash="rmtrash"
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias ll='ls -la'
 alias rm='rm -i'
 alias cp='cp -i'
@@ -15,7 +12,6 @@ alias lynx='lynx -accept_all_cookies'
 function cd {
     builtin cd "$@" && ls -F
         }
-alias ctags="`brew --prefix`/bin/ctags"
 alias panboot="pandoc --template ~/.pandoc/pandoc-bootstrap/template.html --css ~/.pandoc/pandoc-bootstrap/template.css --self-contained --toc --toc-depth 2"
 
 dt () {
@@ -42,8 +38,6 @@ NO_COLOR="\[\033[0m\]"
  
 PS1="$NO_COLOR\u:$RED[\W]$YELLOW\$(parse_git_branch)$NO_COLOR\$ "
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -53,3 +47,6 @@ export PATH="/usr/local/bin/fits-0.8.5:$PATH"
 function bgrep { 
   ag "$@" $(bundle show --paths) . 
 } 
+
+source ~/.git-completion.bash
+
