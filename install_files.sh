@@ -10,6 +10,6 @@ cp .tmux.conf ~/.tmux.conf
 cp .gitignore_global ~/.gitignore_global
 cp .git-completion.bash ~/.git-completion.bash
 cp .gitconfig ~/.gitconfig
-mkdir ./.vim/
+mkdir ~/.vim/
 cp -rf ./.vim/colors ~/.vim/colors/
 cp -rf ./.tmuxinator/ ~/.tmuxinator/ 
