@@ -2,7 +2,7 @@
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
 # post: tmux -CC attach -t scholar
-name: scholar
+name: scholar3
 root: ~/development/scholar_uc
 pre-window: rvm use ruby-2.4.1
 windows:
