@@ -1,18 +1,25 @@
 export EDITOR=vim
 
+# virtual env config
+VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.6
+export VIRTUALENVWRAPPER_PYTHON
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/development
+source /Library/Frameworks/Python.framework/Versions/3.6/bin/virtualenvwrapper.sh
+
+
 # User specific aliases and functions
 set -o vi
-alias trash="rmtrash"
 alias ll='ls -la'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias tags='ctags -R -f ./.git/tags .'
 alias lynx='lynx -accept_all_cookies'
-function cd {
-    builtin cd "$@" && ls -F
-        }
 alias panboot="pandoc --template ~/.pandoc/pandoc-bootstrap/template.html --css ~/.pandoc/pandoc-bootstrap/template.css --self-contained --toc --toc-depth 2"
+alias sudo='sudo '
+alias time2work="~/.time2work.sh"
+alias time2play="~/.time2play.sh"
 
 dt () {
       date +%Y%m%d ${1:+--date "$_*"}
