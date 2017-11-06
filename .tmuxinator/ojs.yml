@@ -1,0 +1,10 @@
+# ~/.tmuxinator/ojs.yml
+
+name: ojs
+root: ~/development/ojs
+windows:
+  - editor:
+      layout: even-vertical
+      panes:
+        - vim .
+        - php -S localhost:8000

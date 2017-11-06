@@ -7,3 +7,4 @@ dump.rdb
 coverage/
 .byebug_history
 .internal_test_app/
+*.log
