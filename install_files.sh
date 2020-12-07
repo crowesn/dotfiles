@@ -1,5 +1,10 @@
 #!/bin/sh
-
+# zsh
+cp .zshrc ~/.zshrc
+cp .zprofile ~/.zprofile
+cp .zshenv ~/.zshenv
+cp .bash_osx ~/.bash_osx
+# bash
 cp .bashrc ~/.bashrc
 cp .profile ~/.profile
 cp .bash_profile ~/.bash_profile

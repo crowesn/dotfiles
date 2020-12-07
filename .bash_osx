@@ -6,4 +6,5 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
     fi
 
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
-alias ctags="`brew --prefix`/bin/ctags"
+alias pi='arp -a | grep -i "b8:27:eb\|dc:a6:32"'
+

@@ -1,0 +1,23 @@
+# ~/.tmuxinator/hyku.yml
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+name: gdja
+root: ~/development/gdja
+pre-window: rvm use ruby-2.5.3
+windows:
+ - editor:
+     root: ~/development/gdja
+     layout: even-vertical
+     panes:
+       - vim .
+       - bundle exec rails c
+ - server-stuff:
+     root: ~/development/gdja
+     layout: tiled
+     panes:
+       - solr_wrapper --version 7.7.2
+       - fcrepo_wrapper
+       - postgres -D ./db/postgres
+       - redis-server /usr/local/etc/redis.conf
+       - DISABLE_REDIS_CLUSTER=true bundle exec sidekiq
+       - DISABLE_REDIS_CLUSTER=true bundle exec rails server -b 0.0.0.0

@@ -10,13 +10,11 @@ cat >/etc/hosts <<EOL
 127.0.0.1 localhost
 255.255.255.255 broadcasthost
 ::1             localhost
-
 ##
 #
 # block for distraction free work!
 #
 ##
-
 127.0.0.1 www.facebook.com
 127.0.0.1 facebook.com
 127.0.0.1 www.reddit.com
@@ -27,5 +25,4 @@ cat >/etc/hosts <<EOL
 127.0.0.1 www.cincinnati.com
 127.0.0.1 www.twitter.com
 127.0.0.1 twitter.com
-
 EOL

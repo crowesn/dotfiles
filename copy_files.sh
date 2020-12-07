@@ -1,5 +1,10 @@
 #!/bin/sh
-
+# zsh
+cp ~/.zshrc .zshrc
+cp ~/.bash_osx .bash_osx
+cp ~/.zprofile .zprofile
+cp ~/.zshenv .zshenv
+# bash
 cp ~/.bashrc .bashrc
 cp ~/.git-completion.bash .git-completion.bash
 cp ~/.bash_osx .bash_osx

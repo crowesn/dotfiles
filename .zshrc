@@ -2,14 +2,6 @@ export EDITOR=vim
 export PASSWORD_STORE_DIR=~/Dropbox/Passwords/.password-store
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-# virtual env config
-VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.6
-export VIRTUALENVWRAPPER_PYTHON
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/development
-source /Library/Frameworks/Python.framework/Versions/3.6/bin/virtualenvwrapper.sh
-
-
 # User specific aliases and functions
 set -o vi
 alias ll='ls -la'
@@ -25,9 +17,9 @@ dt () {
 export -f dt
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+#if [ -f /etc/bashrc ]; then
+# . /etc/bashrc
+#fi
 
 export CLICOLOR=1
 export LSCOLORS=cxfxcxdxbxegedabagacad
@@ -60,7 +52,7 @@ source ~/.git-completion.bash
 # Add npm path
 export PATH=~/.npm-global/bin:$PATH
 
-source ~/.profile
+source ~/.zprofile
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 
