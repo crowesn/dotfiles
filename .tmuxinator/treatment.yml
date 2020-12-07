@@ -1,0 +1,18 @@
+# ~/.tmuxinator/treatment.yml
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+name: treatment
+root: ~/development/treatment_database
+pre-window: rvm use ruby-2.5.1
+windows:
+ - editor:
+     root: ~/development/treatment_database
+     layout: even-vertical
+     panes:
+       - vim .
+       - bundle exec rails c
+ - server-stuff:
+     root: ~/development/treatment_database
+     layout: tiled
+     panes:
+       - rails s -b 0.0.0.0

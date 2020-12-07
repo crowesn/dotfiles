@@ -17,9 +17,9 @@ dt () {
 export -f dt
 
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+#if [ -f /etc/bashrc ]; then
+# . /etc/bashrc
+#fi
 
 export CLICOLOR=1
 export LSCOLORS=cxfxcxdxbxegedabagacad
@@ -52,7 +52,7 @@ source ~/.git-completion.bash
 # Add npm path
 export PATH=~/.npm-global/bin:$PATH
 
-source ~/.profile
+source ~/.zprofile
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 

@@ -1,0 +1,22 @@
+# ~/.tmuxinator/ucrate.yml
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t scholar
+name: ucrate
+root: ~/development/ucrate
+pre-window: rvm use ruby-2.5.5
+windows:
+ - editor:
+     root: ~/development/ucrate
+     layout: even-vertical
+     panes:
+       - vim .
+       - bundle exec rails c
+ - server-stuff:
+     root: ~/development/ucrate
+     layout: tiled
+     panes:
+       - redis-server
+       - fcrepo_wrapper -p 8984
+       - solr_wrapper -d solr/config/ --collection_name hydra-development
+       - rails s -b 0.0.0.0

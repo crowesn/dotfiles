@@ -39,6 +39,7 @@ set tabstop=2
 set expandtab
 set shiftwidth=2
 set cursorline
+set paste
 syntax on
 filetype plugin indent on
 au BufRead,BufNewFile *.md set filetype=markdown
