@@ -1,5 +1,6 @@
 #!/bin/bash
 cat >/etc/hosts <<EOL
+
 ##
 # Host Database
 #

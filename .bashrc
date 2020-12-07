@@ -2,6 +2,14 @@ export EDITOR=vim
 export PASSWORD_STORE_DIR=~/Dropbox/Passwords/.password-store
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
+# virtual env config
+VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.6
+export VIRTUALENVWRAPPER_PYTHON
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/development
+source /Library/Frameworks/Python.framework/Versions/3.6/bin/virtualenvwrapper.sh
+
+
 # User specific aliases and functions
 set -o vi
 alias ll='ls -la'
